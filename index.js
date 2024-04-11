@@ -3,9 +3,14 @@ const app = express();
 const mongoose = require("mongoose");
 const port = 8080;
 
-//root route
-app.get("/" ,(req ,res)=>{
-    res.send("hello i am root")
+const path = require('path');
+app.use(express.static(path.join(__dirname, "/public")));
+app.set("view engine","ejs");
+app.set("views", path.join(__dirname, "/views/pages"));
+
+//test from shaurya
+app.get('/', function(req, res) {
+    res.render('home'); 
 });
 
 
