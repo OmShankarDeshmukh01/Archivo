@@ -9,11 +9,9 @@ Project Description
 - [Dependencies](#dependencies)
 - [Setup](#setup)
 - [Usage](#usage)
-- [Model Training](#model-training)
-- [Evaluation](#evaluation)
 - [Contributors](#contributors)
 - [Acknowledgments](#acknowledgments)
-- [License](#license)
+
 
 ## Overview
 
@@ -62,7 +60,6 @@ Access the app in your web browser at `http://localhost:8080`.
 ## Contributors
 
 - Your Name ([LinkedIn](Your LinkedIn Profile Link))
--
 
 ## Acknowledgments
 
