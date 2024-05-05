@@ -37,7 +37,7 @@ header {
   /* background-color: red; */
 }
 
-.navbar{
+.navbar {
   position: relative;
   display: flex;
   flex-wrap: wrap;
@@ -46,20 +46,20 @@ header {
   /* background-color: antiquewhite; */
 }
 
-.logo{
+.logo {
   height: 7rem;
   width: 20%;
   padding-top: 20px;
   /* background-color: aqua; */
 }
 
-.logo-img{
-  width: 100%;
-  height: 100%;
+.logo-img {
+  width: 80%;
+  height: 90%;
   object-fit: cover;
 }
 
-.menu{
+.menu {
   position: relative;
   display: flex;
   justify-content: center;
@@ -69,14 +69,124 @@ header {
   flex-basis: 20;
 }
 
-.menu-items{
+.menu-items {
   list-style-type: none;
   padding-left: 30rem;
 }
 
-.menu-items li{
+.menu-items li {
   display: inline-block;
   margin-right: 2rem;
   font-size: 1.2rem;
   font-weight: 500;
+}
+
+.menu-items .menu-links {
+  text-decoration: none;
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  /* background-color: red; */
+  height: 30rem;
+}
+
+.main .main1{
+  text-align: center;
+}
+
+.main-content {
+  color: #030303;
+  margin: 0 auto 45px;
+  max-width: 12em;
+  font-size: 4em;
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -2px;
+}
+
+.blue-underline {
+  text-decoration: none;
+  position: relative;
+  display: inline-block;
+}
+
+.blue-underline::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 100%;
+  height: 1px;
+  background-color: blue;
+  border-radius: 5px;
+  box-shadow: 0 0 5px blue;
+}
+
+.main .main2{
+  padding-bottom: 1rem;
+}
+
+.main-subtitle{
+  color: #737373;
+  font-size: 20px;
+  font-weight: normal;
+}
+
+.button-login {
+  position: relative;
+  display: inline-block;
+  margin: 15px;
+  padding: 15px 40px;
+  text-align: center;
+  font-size: 18px;
+  letter-spacing: 1px;
+  text-decoration: none;
+  color: white;
+  background: transparent;
+  cursor: pointer;
+  transition: ease-out 0.5s;
+  border: 2px solid #725AC1;
+  border-radius: 10px;
+  box-shadow: inset 0 0 0 0 #725AC1;
+  background-color: #725AC1;
+}
+
+.button-login:hover {
+  color: #725AC1;
+  box-shadow: inset 0 -100px 0 0 white;
+}
+
+.button-login:active {
+  transform: scale(0.9);
+}
+
+.button-signup {
+  position: relative;
+  display: inline-block;
+  margin: 15px;
+  padding: 15px 30px;
+  text-align: center;
+  font-size: 18px;
+  letter-spacing: 1px;
+  text-decoration: none;
+  color: #725AC1;
+  background: transparent;
+  cursor: pointer;
+  transition: ease-out 0.5s;
+  border: 2px solid #725AC1;
+  border-radius: 10px;
+  box-shadow: inset 0 0 0 0 #725AC1;
+}
+
+.button-signup:hover {
+  color: white;
+  box-shadow: inset 0 -100px 0 0 #725AC1;
+}
+
+.button-signup:active {
+  transform: scale(0.9);
 }
