@@ -8,11 +8,18 @@ app.use(express.static(path.join(__dirname, "/public")));
 app.set("view engine","ejs");
 app.set("views", path.join(__dirname, "/views/pages"));
 
-//test from shaurya
+
 app.get('/', function(req, res) {
     res.render('home'); 
 });
 
+app.get('/signup', function(req, res) {
+    res.render('authentication'); 
+});
+
+app.get('/login', function(req, res) {
+    res.render('authentication'); 
+});
 
 app.listen(port , ()=>{     
     console.log("app is listening to port"); 

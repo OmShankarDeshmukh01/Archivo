@@ -1,0 +1,57 @@
+<!-- boilerplate.ejs -->
+<%
+    // define the page title
+    var pageTitle = "Authenticate";
+%>
+
+<!-- dont change the boilerplate code path -->
+<%- include('../layouts/boilerplate', { pageTitle: pageTitle }) %>
+
+
+<!-- Specific page content starts here -->
+<link rel="stylesheet" type="text/css" href="/css/authentication.css">
+<div class="app">
+    <div class="header">
+      <div class="logo">
+          <a href="#">
+              <img src="images/logo3.svg" alt="logo" class="logo-img">
+          </a>
+      </div>       
+    </div>
+    <div class="wrapper">
+      <div class="left-side">
+      </div>
+      
+        <div class="main">
+  
+          <input type="checkbox" id="chk" aria-hidden="true">
+  
+          <div class="signup">
+            <form>
+              <div class="signup-div">
+                <label for="chk" aria-hidden="true" onclick="goToSignup()">Sign Up</label>
+              </div>
+              <input type="text" name="txt" placeholder="Username" required="" >
+              <input type="email" name="email" placeholder="Email" required="" >
+              <input type="password" name="pswd" placeholder="Password" required="" >
+              <button>Sign up</button>
+            </form>
+          </div>
+  
+          <div class="login">
+            <form >
+              <label for="chk" aria-hidden="true" onclick="goToLogin()">Login</label>
+              <input type="email" name="email" placeholder="Email" required>
+              <input type="Password" name="pswd" placeholder="Password" required>
+              <button>Login</button>
+            </form>
+          </div>
+  
+        </div>
+    </div>
+  
+  </div> 
+
+  <script src="/js/authentication.js"></script>
+</body>
+</html>
