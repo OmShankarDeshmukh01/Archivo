@@ -9,3 +9,7 @@ function goToSignup() {
   history.pushState({}, "", "/signup");
   document.querySelector(".signup").style.display = "block";
 }
+
+function navigateToHome() {
+  window.location.href = '/'; // Navigate back to home
+}
