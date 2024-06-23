@@ -15,6 +15,7 @@
     "express": "^4.19.1",
     "mongoose": "^8.2.3",
     "node": "^18.20.2",
-    "nodemon": "^3.1.0"
+    "nodemon": "^3.1.0",
+    "virtualenv": "^0.3.1"
   }
 }

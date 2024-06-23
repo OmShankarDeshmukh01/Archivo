@@ -3,24 +3,76 @@ const app = express();
 const mongoose = require("mongoose");
 const port = 8080;
 
-const path = require('path');
+const path = require("path");
 app.use(express.static(path.join(__dirname, "/public")));
-app.set("view engine","ejs");
+app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "/views/pages"));
 
-
-app.get('/', function(req, res) {
-    res.render('home'); 
+//middleware
+app.use(express.json());
+app.use((req, res, next) => {
+  console.log(req.path, req.method);
+  next();
 });
 
-app.get('/signup', function(req, res) {
-    res.render('authentication'); 
+//home route
+app.get("/", function (req, res) {
+  res.render("home");
 });
 
-app.get('/login', function(req, res) {
-    res.render('authentication'); 
+//auth route
+app.get("/signup", function (req, res) {
+  res.render("authentication");
 });
 
-app.listen(port , ()=>{     
-    console.log("app is listening to port"); 
+//same route as auth
+app.get("/login", function (req, res) {
+  res.render("authentication");
+});
+
+//get all tasks
+app.get("/tasks", function (req, res) {
+  res.render("tasks");
+});
+
+//get a single task by id
+app.get("/tasks/:id", function (req, res) {
+  res.json({ message: "get a single task by id" });
+});
+
+//post a new task with id
+app.post("/tasks", function (req, res) {
+  res.json({ message: "post a new task" });
+});
+
+//delete a single task by id
+app.delete("/tasks/:id", function (req, res) {
+  res.json({ message: "delete single task by id" });
+});
+
+//update with id
+app.patch("/tasks/:id", function (req, res) {
+  res.json({ message: "update task by id" });
+});
+
+//extra static pages
+
+app.get("/explore", function (req, res) {
+  res.render("explore");
+});
+
+// app.get('/features', function(req, res){
+//     res.render('features');
+// });
+
+// app.get('/aboutus', function(req, res) {
+//     res.render('aboutus');
+// });
+
+// app.get('/contactus', function(req, res) {
+//     res.render('contactus');
+// });
+
+app.listen(port, () => {
+  console.log("app is listening to port 8080");
 });
