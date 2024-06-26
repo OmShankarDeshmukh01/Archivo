@@ -20,6 +20,11 @@ app.get("/", function (req, res) {
   res.render("home");
 });
 
+//evaluation route
+app.get("/eva", function (req, res) {
+  res.render("evaluation");
+});
+
 //auth route
 app.get("/signup", function (req, res) {
   res.render("authentication");
@@ -74,5 +79,7 @@ app.get("/explore", function (req, res) {
 // });
 
 app.listen(port, () => {
-  console.log("app is listening to port 8080");
+  console.log(`app is listenning at http://localhost:${port}`)
+  
+  
 });
